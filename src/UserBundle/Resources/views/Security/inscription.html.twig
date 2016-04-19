@@ -4,7 +4,6 @@
   {% if error %}
     <div class="alert alert-danger">{{ error.message }}</div>
   {% endif %}
-
   <form action="{{ path('inscription_valid') }}" method="post">
     <label for="username"> :</label>
     <input type="text" id="username" name="_username" value="{{ last_username }}" />

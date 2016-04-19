@@ -3,10 +3,106 @@
   <head>
     <meta charset="utf-8">
     <title>{% block title %} Plateforme{% endblock %}</title>
+    {% stylesheets filter='cssrewrite'
+	  '@PlateformInballBundle/Resources/public/css/*'
+	  'css/foundation.css' %}
+	  <link rel="stylesheet" href="{{ asset_url }}" type="text/css" />
+	{% endstylesheets %}
+	{% javascripts
+	  '@PlateformInballBundle/Resources/public/js/*'
+	  'js/foundation.js' %}
+	  <script type="text/javascript" src="{{ asset_url }}"></script>	
+	{% endjavascripts %}
   </head>
+   
   <body>
+  <header>
+ 
+<div class="top-bar">
+<div class="top-bar-left">
+<ul class="menu">
+<li><a href="#">One</a></li>
+<li><a href="#">Two</a></li>
+<li><a href="#">Three</a></li>
+<li><a href="#">Four</a></li>
+</ul>
+</div>
+<div class="top-bar-right">
+<ul class="menu">
+<li><input type="search" placeholder="Search"></li>
+<li><button type="button" class="button">Search</button></li>
+</ul>
+</div>
+</div>
+ 
+ 
+<div class="row">
+<div class="medium-4 columns">
+<img src="http://placehold.it/450x183&amp;text=LOGO" alt="company logo">
+</div>
+<div class="medium-8 columns">
+<img src="http://placehold.it/900x175&amp;text=Responsive Ads - ZURB Playground/333" alt="advertisement for deep fried Twinkies">
+</div>
+</div>
+ 
+<br>
+<div class="title-bar" data-responsive-toggle="main-menu" data-hide-for="medium" data-responsivetoggle="5chhtc-responsivetoggle" style="display: none;">
+<button class="menu-icon" type="button" data-toggle=""></button>
+<div class="title-bar-title">Menu</div>
+</div>
+<div class="top-bar" id="main-menu">
+<ul class="menu vertical medium-horizontal expanded medium-text-center dropdown" data-responsive-menu="drilldown medium-dropdown" role="menubar" data-dropdownmenu="2areh2-dropdownmenu" data-responsivemenu="m3kahm-responsivemenu">
+<li class="has-submenu is-dropdown-submenu-parent is-right-arrow opens-right" role="menuitem" tabindex="0" title="Tech" aria-haspopup="true"><a href="#" tabindex="-1">Tech</a>
+<ul class="submenu menu vertical is-dropdown-submenu first-sub" data-submenu="" aria-hidden="true" tabindex="-1" role="menu">
+<li role="menuitem" class="is-submenu-item is-dropdown-submenu-item" tabindex="0"><a href="#" tabindex="-1">One</a></li>
+<li role="menuitem" class="is-submenu-item is-dropdown-submenu-item" tabindex="0"><a href="#" tabindex="-1">Two</a></li>
+<li role="menuitem" class="is-submenu-item is-dropdown-submenu-item" tabindex="0"><a href="#" tabindex="-1">Three</a></li>
+</ul>
+</li>
+<li class="has-submenu is-dropdown-submenu-parent is-right-arrow opens-right" role="menuitem" tabindex="0" title="Energy" aria-haspopup="true"><a href="#" tabindex="-1">Energy</a>
+<ul class="submenu menu vertical is-dropdown-submenu first-sub" data-submenu="" aria-hidden="true" tabindex="-1" role="menu">
+<li role="menuitem" class="is-submenu-item is-dropdown-submenu-item" tabindex="0"><a href="#" tabindex="-1">One</a></li>
+<li role="menuitem" class="is-submenu-item is-dropdown-submenu-item" tabindex="0"><a href="#" tabindex="-1">Two</a></li>
+<li role="menuitem" class="is-submenu-item is-dropdown-submenu-item" tabindex="0"><a href="#" tabindex="-1">Three</a></li>
+</ul>
+</li>
+<li class="has-submenu is-dropdown-submenu-parent is-right-arrow opens-right" role="menuitem" tabindex="0" title="Space" aria-haspopup="true"><a href="#" tabindex="-1">Space</a>
+<ul class="submenu menu vertical is-dropdown-submenu first-sub" data-submenu="" aria-hidden="true" tabindex="-1" role="menu">
+<li role="menuitem" class="is-submenu-item is-dropdown-submenu-item" tabindex="0"><a href="#" tabindex="-1">One</a></li>
+<li role="menuitem" class="is-submenu-item is-dropdown-submenu-item" tabindex="0"><a href="#" tabindex="-1">Two</a></li>
+<li role="menuitem" class="is-submenu-item is-dropdown-submenu-item" tabindex="0"><a href="#" tabindex="-1">Three</a></li>
+</ul>
+</li>
+<li class="has-submenu is-dropdown-submenu-parent is-right-arrow opens-right" role="menuitem" tabindex="0" title="Medicine" aria-haspopup="true"><a href="#" tabindex="-1">Medicine</a>
+<ul class="submenu menu vertical is-dropdown-submenu first-sub" data-submenu="" aria-hidden="true" tabindex="-1" role="menu">
+<li role="menuitem" class="is-submenu-item is-dropdown-submenu-item" tabindex="0"><a href="#" tabindex="-1">One</a></li>
+<li role="menuitem" class="is-submenu-item is-dropdown-submenu-item" tabindex="0"><a href="#" tabindex="-1">Two</a></li>
+<li role="menuitem" class="is-submenu-item is-dropdown-submenu-item" tabindex="0"><a href="#" tabindex="-1">Three</a></li>
+</ul>
+</li>
+<li class="has-submenu is-dropdown-submenu-parent is-right-arrow opens-right" role="menuitem" tabindex="0" title="Robotics" aria-haspopup="true"><a href="#" tabindex="-1">Robotics</a>
+<ul class="submenu menu vertical is-dropdown-submenu first-sub" data-submenu="" aria-hidden="true" tabindex="-1" role="menu">
+<li role="menuitem" class="is-submenu-item is-dropdown-submenu-item" tabindex="0"><a href="#" tabindex="-1">One</a></li>
+<li role="menuitem" class="is-submenu-item is-dropdown-submenu-item" tabindex="0"><a href="#" tabindex="-1">Two</a></li>
+<li role="menuitem" class="is-submenu-item is-dropdown-submenu-item" tabindex="0"><a href="#" tabindex="-1">Three</a></li>
+</ul>
+</li>
+<li class="has-submenu is-dropdown-submenu-parent is-right-arrow opens-right" role="menuitem" tabindex="0" title="Tesla" aria-haspopup="true"><a href="#" tabindex="-1">Tesla</a>
+<ul class="submenu menu vertical is-dropdown-submenu first-sub" data-submenu="" aria-hidden="true" tabindex="-1" role="menu">
+<li role="menuitem" class="is-submenu-item is-dropdown-submenu-item" tabindex="0"><a href="#" tabindex="-1">One</a></li>
+<li role="menuitem" class="is-submenu-item is-dropdown-submenu-item" tabindex="0"><a href="#" tabindex="-1">Two</a></li>
+<li role="menuitem" class="is-submenu-item is-dropdown-submenu-item" tabindex="0"><a href="#" tabindex="-1">Three</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</header>
+  
 
-    {% block body %}
+  	{% block body %}
+    
+    	
+    
     {% endblock %}
 
   </body>
