@@ -3,15 +3,10 @@
 {% block content %}
   {% block fos_user_content %}
 	  bhgyhf
-	  <form action="{{ path('fos_user_registration_register') }}" method="post">
-	    <label for="username"> :</label>
-	    <input type="text" id="username" name="_username" value="{{ last_username }}" />
-	
-	    <label for="password">Mot de passe :</label>
-	    <input type="password" id="password" name="_password" />
-	    <br />
-	    <input type="submit" value="S'inscrire" />
-	  </form>
+
+	  
+	  {% include "FOSUserBundle:Registration:register_content.html.twig" %}
+	  
     
     {% endblock fos_user_content %}
 {% endblock content %}
